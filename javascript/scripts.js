@@ -22,35 +22,69 @@ const body = document.querySelector('body');
 
 const my_div = document.createElement('div');
 my_div.classList.add('container');
-
 body.append(my_div);
+
+const my_row = document.createElement('div');
+my_row.classList.add('row');
+my_div.append(my_row);
 
 for (let i = 1; i < 101; i++ ) {
     if ((i % 3 == 0) && (i % 5 != 0)) {
-        const my_p = document.createElement('p');
-        my_p.append(fizz);
-        my_div.append(my_p);
+        const my_col = document.createElement('div');
+        my_col.classList.add('col-2');
+        my_col.classList.add('d-flex');
+        my_col.classList.add('justify-content-center');
+        my_col.classList.add('align-items-center');
+        my_col.classList.add('bg-success');
+        my_col.classList.add('border');
+        my_col.classList.add('border-5');
+        my_col.append(fizz);
+        my_row.append(my_col);
         console.log(fizz);
     }
 
     else if ((i % 5 == 0) && (i % 3 != 0)) {
-        const my_p = document.createElement('p');
-        my_p.append(buzz);
-        my_div.append(my_p);
+        const my_col = document.createElement('div');
+        my_col.classList.add('col-2');
+        my_col.classList.add('d-flex');
+        my_col.classList.add('justify-content-center');
+        my_col.classList.add('align-items-center');
+        my_col.classList.add('h-80');
+        my_col.classList.add('bg-warning');
+        my_col.classList.add('border');
+        my_col.classList.add('border-5');
+        my_col.append(buzz);
+        my_row.append(my_col);
         console.log(buzz);
     }
 
     else if ((i % 3 == 0) && (i % 5 == 0)) {
-        const my_p = document.createElement('p');
-        my_p.append(fizz + buzz);
-        my_div.append(my_p);
+        const my_col = document.createElement('div');
+        my_col.classList.add('col-2');
+        my_col.classList.add('d-flex');
+        my_col.classList.add('justify-content-center');
+        my_col.classList.add('align-items-center');
+        my_col.classList.add('h-80');
+        my_col.classList.add('bg-danger');
+        my_col.classList.add('border');
+        my_col.classList.add('border-5');
+        my_col.append(fizz + buzz);
+        my_row.append(my_col);
         console.log(fizz + buzz);
     }
 
     else {
-        const my_p = document.createElement('p');
-        my_p.append(i);
-        my_div.append(my_p);;
+        const my_col = document.createElement('div');
+        my_col.classList.add('col-2');
+        my_col.classList.add('d-flex');
+        my_col.classList.add('justify-content-center');
+        my_col.classList.add('align-items-center');
+        my_col.classList.add('h-80');
+        my_col.classList.add('bg-primary');
+        my_col.classList.add('border');
+        my_col.classList.add('border-5');
+        my_col.append(i);
+        my_row.append(my_col);;
         console.log(i);
     }
 }

@@ -15,23 +15,42 @@
 
 */
 
-fizz = "Fizz";
-buzz = "Buzz";
+const fizz = "Fizz";
+const buzz = "Buzz";
+
+const body = document.querySelector('body');
+
+const my_div = document.createElement('div');
+my_div.classList.add('container');
+
+body.append(my_div);
 
 for (let i = 1; i < 101; i++ ) {
     if ((i % 3 == 0) && (i % 5 != 0)) {
+        const my_p = document.createElement('p');
+        my_p.append(fizz);
+        my_div.append(my_p);
         console.log(fizz);
     }
 
     else if ((i % 5 == 0) && (i % 3 != 0)) {
+        const my_p = document.createElement('p');
+        my_p.append(buzz);
+        my_div.append(my_p);
         console.log(buzz);
     }
 
     else if ((i % 3 == 0) && (i % 5 == 0)) {
+        const my_p = document.createElement('p');
+        my_p.append(fizz + buzz);
+        my_div.append(my_p);
         console.log(fizz + buzz);
     }
 
     else {
+        const my_p = document.createElement('p');
+        my_p.append(i);
+        my_div.append(my_p);;
         console.log(i);
     }
 }

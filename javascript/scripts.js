@@ -29,62 +29,33 @@ my_row.classList.add('row');
 my_div.append(my_row);
 
 for (let i = 1; i < 101; i++ ) {
+    
+    const my_col = document.createElement('div');
+    my_col.classList.add('col-2', 'd-flex', 'justify-content-center', 'align-items-center', 'h-80', 'border', 'border-5');
+
     if ((i % 3 == 0) && (i % 5 != 0)) {
-        const my_col = document.createElement('div');
-        my_col.classList.add('col-2');
-        my_col.classList.add('d-flex');
-        my_col.classList.add('justify-content-center');
-        my_col.classList.add('align-items-center');
         my_col.classList.add('bg-success');
-        my_col.classList.add('border');
-        my_col.classList.add('border-5');
         my_col.append(fizz);
-        my_row.append(my_col);
         console.log(fizz);
     }
 
     else if ((i % 5 == 0) && (i % 3 != 0)) {
-        const my_col = document.createElement('div');
-        my_col.classList.add('col-2');
-        my_col.classList.add('d-flex');
-        my_col.classList.add('justify-content-center');
-        my_col.classList.add('align-items-center');
-        my_col.classList.add('h-80');
         my_col.classList.add('bg-warning');
-        my_col.classList.add('border');
-        my_col.classList.add('border-5');
         my_col.append(buzz);
-        my_row.append(my_col);
         console.log(buzz);
     }
 
     else if ((i % 3 == 0) && (i % 5 == 0)) {
-        const my_col = document.createElement('div');
-        my_col.classList.add('col-2');
-        my_col.classList.add('d-flex');
-        my_col.classList.add('justify-content-center');
-        my_col.classList.add('align-items-center');
-        my_col.classList.add('h-80');
         my_col.classList.add('bg-danger');
-        my_col.classList.add('border');
-        my_col.classList.add('border-5');
         my_col.append(fizz + buzz);
-        my_row.append(my_col);
         console.log(fizz + buzz);
     }
 
     else {
-        const my_col = document.createElement('div');
-        my_col.classList.add('col-2');
-        my_col.classList.add('d-flex');
-        my_col.classList.add('justify-content-center');
-        my_col.classList.add('align-items-center');
-        my_col.classList.add('h-80');
         my_col.classList.add('bg-primary');
-        my_col.classList.add('border');
-        my_col.classList.add('border-5');
         my_col.append(i);
-        my_row.append(my_col);;
         console.log(i);
     }
+
+    my_row.append(my_col);
 }
